@@ -3,33 +3,45 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>10 Sec Maths Game</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>10 Sec Math Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="script.js"></script>
+    <style>
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+             -webkit-appearance: none;
+              margin: 0;
+      }
+
+      input[type=number] {
+          -moz-appearance: textfield;
+      }
+    </style>
   </head>
-  <body>
+  <body class="bg-dark text-white">
     <div class="container">
       <div class="row">
         <div class="scoreboard">
           <p id="current-score">Current Score: 0</p>
           <p id="high-score">High Score: 0</p>
         </div>
-        <div class="game-board">
+        <div class="game-board d-flex justify-content-center text-center">
           <div>
-            <div id="timer">10</div>
+            <div id="time-left" class="text-danger">10</div>
             <p>seconds left</p>
           </div>
-          <table>
-            <tr class="equation">
-              <td class="first-number"></td>
-              <td class="operator">+</td>
-              <td class="second-number"></td>
-              <td class="equals">=</td>
-              <td class="answer"><input type="text" size="1"</td>
-            </tr>
-          </table>
+          <form>
+            <div>
+              <div class="equation">
+                <p>equation = <input type="number"  class="userInput "></p>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <p id="operator">+ <input type="checkbox" id="addition">- <input type="checkbox" id="subtraction">x <input type="checkbox" id="multiplication">/ <input type="checkbox" id="division"></p>
+            </div>   
+          </form>
         </div>
       </div>
     </div>

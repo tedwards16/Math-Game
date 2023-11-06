@@ -2,28 +2,33 @@ html {
   height: 100%;
   width: 100%;
 }
-
-.game-board {
-  text-align: center;
-  border: 2px solid black;
-  margin-left: 10em;
-  margin-right: 10em;
-  font-size: 1em;
+body {
+   
 }
-
-table {
-  border-collapse: collapse;
-  margin: 0 auto;
-  margin-bottom: 50px;
-  font-size: 2em;
+input {
+  margin-right: 15px;
 }
-#timer {
+#time-left {
   font-size: 5em;
-  color: red;
-  text-align: center;
-  margin-top: 50px;
 }
 
 .scoreboard {
-  color: blue;
+  padding-left: 0px
+}
+
+.game-board {
+  height: 500px;
+  width: 500px;
+  border: 2px solid #cce8b5;
+  margin: auto;
+  flex-direction: column;
+}
+
+.userInput {
+  width: 10%;
+}
+
+#operator {
+  text-align: center;
+  font-size: 1em;
 }
