@@ -1,4 +1,6 @@
 $(document).ready(function(){
+  var currentScore = 0;
+  var highScore = 0;
   var operator = {
     "+": 0,
     "-": 1,
@@ -10,7 +12,7 @@ function equationGenerator () {
     var equation = {};
     var firstNumber = Math.floor(Math.random() * 10);
     var secondNumber = Math.floor(Math.random() * 10);
-    var operator = "+"
+    var operator = ["*", "/", "+", "-"][Math.floor(Math.random() * 4)];
     while ((operator == "/" && secondNumber == 0) || (operator == "/" &&  firstNumber%secondNumber !== 0) || (operator == "-" && firstNumber < secondNumber)) {
       firstNumber = Math.floor(Math.random() * 10);
     }
@@ -36,6 +38,11 @@ function equationGenerator () {
       correctAnswer = Number(currentEquation.rightSide);
       $("#equation").text(currentEquation.leftSide);
       $(".userInput").val("");
+      currentScore++;
+      $("#current-score").text("Current Score: " + currentScore);
+      if (currentScore > highScore) {
+        $("#high-score").text("High Score: " + currentScore);
+      }
     }
   });
 
