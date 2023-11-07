@@ -6,7 +6,7 @@ body {
    
 }
 input {
-  margin-right: 15px;
+  
 }
 #time-left {
   font-size: 5em;
@@ -24,11 +24,13 @@ input {
   flex-direction: column;
 }
 
-.userInput {
+#userInput {
   width: 10%;
 }
 
 #operator {
   text-align: center;
   font-size: 1em;
+  margin-left: 5px;
+  margin-right: 5px;
 }
